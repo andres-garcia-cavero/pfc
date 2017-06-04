@@ -1,0 +1,15 @@
+$border-radius-base:        0px;
+$border-radius-large:       0px;
+$border-radius-small:       0px;
+
+$navbar-default-bg: #f08f0c;
+$navbar-default-color: #ffffff;
+$navbar-default-link-color: #ffffff;
+
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+  font-family: Courier New, Courier, monospace;
+  color: blue;
+}
