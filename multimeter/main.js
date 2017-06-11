@@ -12,6 +12,7 @@ var path, node_ssh, ssh, fs
 fs = require('fs')
 path = require('path')
 node_ssh = require('node-ssh')
+ssh = new node_ssh()
 
 ssh.connect({
   host: '',
