@@ -11,5 +11,21 @@ $icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   font-family: Courier New, Courier, monospace;
-  color: blue;
+}
+
+.navbar {
+
+  margin-bottom: 0px;
+}
+
+.col-xs-3, .col-xs-4 {
+  padding: 0px;
+}
+
+.list-group {
+  margin-bottom: 0px;
+}
+
+.sub-list a {
+  padding-left: 40px;
 }

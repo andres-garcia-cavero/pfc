@@ -8,11 +8,22 @@ import { AppComponent } from './app.component';
 import { ConfigComponent } from './config/config.component';
 import { CreditsComponent } from './credits/credits.component';
 import { HomeComponent } from './home/home.component';
+import { HelpComponent } from './help/help.component';
+import { DevicesComponent } from './devices/devices.component';
+import { ToolsComponent } from './tools/tools.component';
+import { ToolsIperfComponent } from './tools-iperf/tools-iperf.component';
+import { ToolsDItgComponent } from './tools-d-itg/tools-d-itg.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'config', component: ConfigComponent },
-  { path: 'credits', component: CreditsComponent }
+  { path: 'credits', component: CreditsComponent },
+  { path: 'devices', component: DevicesComponent },
+  { path: 'devices/:id', component: DevicesComponent },
+  { path: 'help', component: HelpComponent },
+  { path: 'tools', component: ToolsComponent },
+  { path: 'tools/iperf', component: ToolsIperfComponent },
+  { path: 'tools/d-itg', component: ToolsDItgComponent }
 ];
 
 @NgModule({
@@ -20,7 +31,12 @@ const appRoutes: Routes = [
     AppComponent,
     ConfigComponent,
     CreditsComponent,
-    HomeComponent
+    HomeComponent,
+    HelpComponent,
+    DevicesComponent,
+    ToolsComponent,
+    ToolsIperfComponent,
+    ToolsDItgComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

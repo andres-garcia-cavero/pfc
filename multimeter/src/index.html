@@ -9,5 +9,17 @@
 </head>
   <body>
     <app-root></app-root>
+    <script>
+    /*
+    console.log('client': process.versions.node);
+    var ipc = require('ipc');
+    ipc.send('close-main-window');
+*/
+
+var os = require('os');
+console.log(os.platform()); // 'darwin'
+console.log(os.release());
+
+    </script>
   </body>
 </html>
