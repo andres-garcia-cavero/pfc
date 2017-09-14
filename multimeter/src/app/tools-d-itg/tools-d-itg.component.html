@@ -1,0 +1,50 @@
+<h2>D-ITG</h2>
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active">
+    <a href="#gui" aria-controls="gui" role="tab" data-toggle="tab">GUI</a>
+  </li>
+  <li role="presentation">
+    <a href="#client" aria-controls="server" role="tab" data-toggle="tab">Client</a>
+  </li>
+  <li role="presentation">
+    <a href="#server" aria-controls="client" role="tab" data-toggle="tab">Server</a>
+  </li>
+</ul>
+<div class="tab-content">
+
+  <div role="tabpanel" class="tab-pane" id="gui">
+<div class="form-horizontal">
+  <h3>Log</h3>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Log File</label>
+    <div class="col-sm-10">
+      <input [(ngModel)]="logFile" type="text" class="form-control"/>
+    </div>
+    <p>Generate sender-side log file (default: /tmp/ITGSend.log).
+                            Generates a log file containing timing, ordering and size information
+                            about every packet sent by ITGSend.
+                            Under Windows the default log file name is "ITGSend.log".</p>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Log File</label>
+    <div class="col-sm-10">
+      <input [(ngModel)]="logAddress" type="text" class="form-control"/>
+    </div>
+    <p>Generate sender-side log file on a remote ITGLog instance.
+     [logging_protocol]
+                            The first parameter sets the log server IP address (default: 127.0.0.1).
+                            The second parameter sets the transport protocol used to establish the
+                            communication between ITGSend and ITGLog: UDP or TCP (default: UDP).
+                            The name of the log file is specified by the -l option.</p>
+  </div>
+</div>
+
+
+  </div>
+  <div role="tabpanel" class="tab-pane" id="client">
+    client --- {{logFile}}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="server">
+server
+  </div>
+</div>

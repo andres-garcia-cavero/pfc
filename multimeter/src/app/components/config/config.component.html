@@ -1,0 +1,12 @@
+<h1>Configuration</h1>
+<h2>Devices</h2>
+<p>Add or remove devices to the list to interact with them in the tests.</p>
+<div>
+  <p *ngFor="let device of devices; let i = index;">
+    {{device._id}}
+  </p>
+</div>
+<input type="text" [(ngModel)]="newDeviceId" />
+<button class="btn btn-success" (click)="addDevice();">
+  add device
+</button>

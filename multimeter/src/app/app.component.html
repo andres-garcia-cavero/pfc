@@ -1,30 +1,42 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<header id="mm-header" class="navbar navbar-default">
+
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">{{title}}</a>
+
     </div>
-  </div><!-- /.container-fluid -->
-</nav>
-<div class="container-fluid">
+    <div class="mm-header-right btn-group">
+      <button class="btn" (click)="toggleDevTools();"><i class="fa fa-2x fa-terminal"></i></button>
+      <button class="btn" (click)="minimize();"><i class="fa fa-window-minimize"></i></button>
+      <button class="btn" [ngClass]="{'mm-hide': maximized }" (click)="maximize();"><i class="fa fa-window-maximize"></i></button>
+      <button class="btn" [ngClass]="{'mm-hide': !maximized }" (click)="restore();"><i class="fa fa-window-restore"></i></button>
+      <button class="btn" (click)="close();"><i class="fa fa-close"></i></button>
+    </div>
+
+</header>
+<main id="mm-main" class="container-fluid">
   <div class="row">
-    <div class="col-xs-2">
+    <nav id="mm-sidebar" class="col-xs-2 scroll">
       <div class="list-group">
-        <a routerLink="config" routerLinkActive="active" class="list-group-item">
-          Config
-        </a>
-        <a routerLink="credits" routerLinkActive="active" class="list-group-item">Credits</a>
+        <a routerLink="home" routerLinkActive="active" class="list-group-item"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a>
+        <a routerLink="dashboard" routerLinkActive="active" class="list-group-item"><i class="fa fa-area-chart fa-fw" aria-hidden="true"></i> Dashboard</a>
+        <a routerLink="testing-lab" routerLinkActive="active" class="list-group-item"><i class="fa fa-flask fa-fw" aria-hidden="true"></i> Testing Lab</a>
+        <a routerLink="config" routerLinkActive="active" class="list-group-item"><i class="fa fa-cogs fa-fw" aria-hidden="true"></i> Config</a>
+        <a routerLink="devices" routerLinkActive="active" class="list-group-item"><i class="fa fa-desktop fa-fw" aria-hidden="true"></i> Devices</a>
+        <div class="list-group sub-list">
+          <a *ngFor="let device of devices; let i = index;" routerLink="devices/{{device._id}}" routerLinkActive="active" class="list-group-item">{{device._id}}</a>
+        </div>
+        <a routerLink="tools" routerLinkActive="active" class="list-group-item"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i> Tools</a>
+        <div class="list-group sub-list">
+          <a routerLink="tools/iperf" routerLinkActive="active" class="list-group-item">Iperf</a>
+          <a routerLink="tools/d-itg" routerLinkActive="active" class="list-group-item">D-ITG</a>
+        </div>
+        <a routerLink="help" routerLinkActive="active" class="list-group-item"><i class="fa fa-question fa-fw" aria-hidden="true"></i> Help</a>
+        <a routerLink="credits" routerLinkActive="active" class="list-group-item"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Credits</a>
       </div>
-    </div>
-    <div class="col-xs-10">
-
-
-
-
-        <router-outlet></router-outlet>
-
-
-
-    </div>
+    </nav>
+    <section id="mm-section" class="col-xs-10">
+      <router-outlet></router-outlet>
+    </section>
   </div>
-</div>
+</main>

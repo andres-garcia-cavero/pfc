@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "electron ."
   },
   "private": true,
   "dependencies": {
@@ -21,10 +22,18 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "dotenv": "^4.0.0",
+    "electron-drag": "^1.2.0",
+    "ipc": "0.0.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "ngx-bootstrap": "^1.8.1",
+    "ngx-electron": "^1.0.3",
     "node-ssh": "^4.2.2",
     "rxjs": "^5.1.0",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

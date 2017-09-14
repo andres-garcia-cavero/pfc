@@ -1,0 +1,28 @@
+<h1>{{_id}}
+  <div class="pull-right">
+    <button class="btn btn-default" (click)="updateDeviceData();">
+      Update device data
+    </button>
+  </div>
+</h1>
+<p>{{device.data?.description}}</p>
+  <tabset>
+    <tab heading="Info">
+      info
+    </tab>
+    <tab heading="Connection">
+
+      <table class="table">
+        <tr><td>IP</td><td>{{device.data?.connection?.ip}}</td></tr>
+        <tr><td>Username</td><td>{{device.data?.connection?.username}}</td></tr>
+        <tr><td>Password</td><td>{{device.data?.connection?.password}}</td></tr>
+
+      </table>
+
+    </tab>
+    <tab heading="OS">OS</tab>
+    <tab heading="Network">{{device.data?.network}}</tab>
+    <tab heading="Folder">folder</tab>
+    <tab heading="Tools">tools</tab>
+    <tab heading="Raw">Raw</tab>
+  </tabset>
