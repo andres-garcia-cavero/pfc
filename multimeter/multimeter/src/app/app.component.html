@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">{{title}}</a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="list-group">
+        <a routerLink="config" routerLinkActive="active" class="list-group-item">Config</a>
+        <a routerLink="devices" routerLinkActive="active" class="list-group-item">Devices</a>
+        <div class="list-group sub-list">
+          <a *ngFor="let device of devices; let i = index;" routerLink="devices/{{device.id}}" routerLinkActive="active" class="list-group-item">{{device.id}}</a>
+        </div>
+        <a routerLink="tools" routerLinkActive="active" class="list-group-item">Tools</a>
+        <div class="list-group sub-list">
+          <a routerLink="tools/iperf" routerLinkActive="active" class="list-group-item">Iperf</a>
+          <a routerLink="tools/d-itg" routerLinkActive="active" class="list-group-item">D-ITG</a>
+        </div>
+        <a routerLink="help" routerLinkActive="active" class="list-group-item">Help</a>
+        <a routerLink="credits" routerLinkActive="active" class="list-group-item">Credits</a>
+      </div>
+    </div>
+    <div class="col-xs-7">
+
+
+
+
+        <router-outlet></router-outlet>
+
+
+
+    </div>
+  </div>
+</div>

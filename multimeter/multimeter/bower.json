@@ -1,0 +1,21 @@
+{
+  "name": "multimeter",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "belsierre <github@belsierre.org>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/belsierre/pfc",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
