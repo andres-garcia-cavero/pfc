@@ -14,6 +14,7 @@ import { OnInit } from '@angular/core';
   providers: [BackendService],
   host: {'(window:minimize)':'minimizeWindow($event)'}
 })
+<<<<<<< HEAD
 export class AppComponent implements OnInit {
 
   title : string = 'Multimeter';
@@ -63,6 +64,14 @@ export class AppComponent implements OnInit {
   toggleDevTools () {
     this._electronService.ipcRenderer.send('toggle-dev-tools','1');
   };
+=======
+export class AppComponent {
+  title = 'Multimeter';
+
+  devices = [
+
+  ];
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
 
 
 }

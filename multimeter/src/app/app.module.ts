@@ -11,6 +11,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 
 // Components
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { ConfigComponent } from './components/config/config.component';
 import { CreditsComponent } from './components/credits/credits.component';
 import { DevicesComponent } from './components/devices/devices.component';
@@ -25,6 +26,16 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 // Services
 import { ConfigService } from './services/config/config.service';
+=======
+import { ConfigComponent } from './config/config.component';
+import { CreditsComponent } from './credits/credits.component';
+import { HomeComponent } from './home/home.component';
+import { HelpComponent } from './help/help.component';
+import { DevicesComponent } from './devices/devices.component';
+import { ToolsComponent } from './tools/tools.component';
+import { ToolsIperfComponent } from './tools-iperf/tools-iperf.component';
+import { ToolsDItgComponent } from './tools-d-itg/tools-d-itg.component';
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -47,14 +58,22 @@ const appRoutes: Routes = [
 
     ConfigComponent,
     CreditsComponent,
+<<<<<<< HEAD
+=======
+    HomeComponent,
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
     HelpComponent,
     DevicesComponent,
     ToolsComponent,
     ToolsIperfComponent,
+<<<<<<< HEAD
     ToolsDItgComponent,
     TestingLabComponent,
     HomeComponent,
     DashboardComponent
+=======
+    ToolsDItgComponent
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

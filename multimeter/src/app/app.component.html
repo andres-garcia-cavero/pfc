@@ -16,6 +16,7 @@
 </header>
 <main id="mm-main" class="container-fluid">
   <div class="row">
+<<<<<<< HEAD
     <nav id="mm-sidebar" class="col-xs-2 scroll">
       <div class="list-group">
         <a routerLink="home" routerLinkActive="active" class="list-group-item"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a>
@@ -27,10 +28,21 @@
           <a *ngFor="let device of devices; let i = index;" routerLink="devices/{{device._id}}" routerLinkActive="active" class="list-group-item">{{device._id}}</a>
         </div>
         <a routerLink="tools" routerLinkActive="active" class="list-group-item"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i> Tools</a>
+=======
+    <div class="col-xs-3">
+      <div class="list-group">
+        <a routerLink="config" routerLinkActive="active" class="list-group-item">Config</a>
+        <a routerLink="devices" routerLinkActive="active" class="list-group-item">Devices</a>
+        <div class="list-group sub-list">
+          <a *ngFor="let device of devices; let i = index;" routerLink="devices/{{device.id}}" routerLinkActive="active" class="list-group-item">{{device.id}}</a>
+        </div>
+        <a routerLink="tools" routerLinkActive="active" class="list-group-item">Tools</a>
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
         <div class="list-group sub-list">
           <a routerLink="tools/iperf" routerLinkActive="active" class="list-group-item">Iperf</a>
           <a routerLink="tools/d-itg" routerLinkActive="active" class="list-group-item">D-ITG</a>
         </div>
+<<<<<<< HEAD
         <a routerLink="help" routerLinkActive="active" class="list-group-item"><i class="fa fa-question fa-fw" aria-hidden="true"></i> Help</a>
         <a routerLink="credits" routerLinkActive="active" class="list-group-item"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Credits</a>
       </div>
@@ -38,5 +50,21 @@
     <section id="mm-section" class="col-xs-10">
       <router-outlet></router-outlet>
     </section>
+=======
+        <a routerLink="help" routerLinkActive="active" class="list-group-item">Help</a>
+        <a routerLink="credits" routerLinkActive="active" class="list-group-item">Credits</a>
+      </div>
+    </div>
+    <div class="col-xs-7">
+
+
+
+
+        <router-outlet></router-outlet>
+
+
+
+    </div>
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
   </div>
 </main>

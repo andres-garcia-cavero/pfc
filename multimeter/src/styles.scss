@@ -15,6 +15,7 @@ $navbar-default-link-color: #ffffff;
 $icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
+<<<<<<< HEAD
 
   //font-family: Courier New, Courier, monospace;
   overflow: hidden;
@@ -186,6 +187,18 @@ button {
     }
 
   }
+=======
+  font-family: Courier New, Courier, monospace;
+}
+
+.navbar {
+
+  margin-bottom: 0px;
+}
+
+.col-xs-3, .col-xs-4 {
+  padding: 0px;
+>>>>>>> 8cd62895e691ce986c16dd2aced897a3e1976033
 }
 
 .list-group {
