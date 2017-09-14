@@ -1,0 +1,31 @@
+$border-radius-base:        0px;
+$border-radius-large:       0px;
+$border-radius-small:       0px;
+
+$navbar-default-bg: #f08f0c;
+$navbar-default-color: #ffffff;
+$navbar-default-link-color: #ffffff;
+
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+  font-family: Courier New, Courier, monospace;
+}
+
+.navbar {
+
+  margin-bottom: 0px;
+}
+
+.col-xs-3, .col-xs-4 {
+  padding: 0px;
+}
+
+.list-group {
+  margin-bottom: 0px;
+}
+
+.sub-list a {
+  padding-left: 40px;
+}
